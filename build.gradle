@@ -1,0 +1,33 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE'
+  }
+}
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+group = 'org.zerhusen'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-web'
+  compile 'org.springframework.boot:spring-boot-starter-security'
+  compile 'org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE'
+  compile 'io.jsonwebtoken:jjwt:0.7.0'
+  compile 'org.projectlombok:lombok:1.16.10'
+  compile 'com.google.guava:guava:19.0'
+
+  testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+

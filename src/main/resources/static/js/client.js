@@ -85,7 +85,6 @@ $(function () {
                 var $userInfoBody = $userInfo.find("#userInfoBody");
 
                 $userInfoBody.append($("<div>").text("Username: " + data.username));
-                $userInfoBody.append($("<div>").text("Email: " + data.email));
 
                 var $authorityList = $("<ul>");
                 data.authorities.forEach(function (authorityItem) {
@@ -130,7 +129,7 @@ $(function () {
 
     $("#exampleServiceBtn").click(function () {
         $.ajax({
-            url: "/persons",
+            url: "/user",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -146,7 +145,7 @@ $(function () {
 
     $("#adminServiceBtn").click(function () {
         $.ajax({
-            url: "/protected",
+            url: "/admin",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             headers: createAuthorizationTokenHeader(),
